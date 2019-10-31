@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<body>
+       
+<div id="root1"></div>
+<div id="root2"></div>
+<div id="root3"></div>
+<div id="root"></div>
+<div id="root4"></div>
+<div id="root0"></div>
+
+<div id="mydiv"></div>
+
+<script type="text/babel">
+class Hello extends React.Component {
+  render() {
+    return <h1>E A I R A P A Z I A D A!</h1>
+  }
+}
+
+ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+
+
+class Football extends React.Component {
+  shoot() {
+    alert("Oie gente!");
+  }
+  render() {
+    return (
+      <button onClick={this.shoot}>Fale algo para mim!</button>
+    );
+  }
+}
+
+ReactDOM.render(<Football />, document.getElementById('root'));
+
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { username: '' }; //valor inicial '' a username
+  }
+  myChangeHandler = (event) => {
+    this.setState({username: event.target.value});
+  }
+  render() {
+    return (
+      <form>
+      <h1>Hello {this.state.username}</h1>
+      <p>Escreva uma mensagem:</p>
+      <input
+        type='text'
+        onChange={this.myChangeHandler}
+      />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById('root2'));
+
+class MyHeader extends React.Component {
+  render() {
+    return (
+      <div>
+      <h1 style={{color: "blue"}}>BOM DIAA!</h1>
+      <p>O sol ja nasceu lá na fazendinha!</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyHeader />, document.getElementById('root1'));
+
+ type="text/babel">
+    ReactDOM.render(<p>Olha eu aqui</p>, document.getElementById('root4'));
+
+    const myelement = React.createElement('h1', {}, 'I do not use JSX!');
+
+ReactDOM.render(myelement, document.getElementById('root4'));
+
+class Car extends React.Component {
+  render() {
+    return <h2>I am a Car!</h2>;
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>
